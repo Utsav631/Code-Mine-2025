@@ -7,18 +7,16 @@ import { USER_CONNECTION_STATUS, User } from "./types/user"
 import { Server } from "socket.io"
 import path from "path"
 import UserModel from "./models/User";
-
-
-
+ 
+ 
+  
 interface UserSocket {
   socketId: string; 
   roomId: string;
-  username: string;
-}
+  username: string; 
+} 
 
 let userSocketMap: UserSocket[] = [];
-
-
 
 dotenv.config()
 
