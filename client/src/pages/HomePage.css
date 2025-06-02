@@ -1,0 +1,79 @@
+
+/* === HomePage Styles === */
+
+.homepage {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.homepage-inner {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 0;
+}
+
+@media (min-width: 640px) {
+    .homepage-inner {
+        flex-direction: row;
+    }
+}
+
+.homepage-illustration {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    animation: upDown 3s ease-in-out infinite;
+}
+
+@media (min-width: 640px) {
+    .homepage-illustration {
+        width: 50%;
+        padding-left: 1rem;
+    }
+}
+
+.illustration-img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+
+@media (min-width: 640px) {
+    .illustration-img {
+        width: 400px;
+    }
+}
+
+.homepage-form {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    scale: 120%;
+}
+
+@media (min-width: 640px) {
+    .homepage-form {
+        width: 50%;
+    }
+}
+
+/* Simple floating animation */
+@keyframes upDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}

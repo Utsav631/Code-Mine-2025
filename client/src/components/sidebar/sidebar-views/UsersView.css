@@ -1,0 +1,101 @@
+.users-view {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  height: 100%;
+  background-color: #1f1f23; /* Dark background to match other components */
+  color: white;
+}
+
+.view-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.users-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 0;
+  margin-top: 10px; /* Changed from -30px to 10px to push buttons down */
+  margin-bottom: 20px; /* Adds gap below buttons before user avatars */
+}
+
+/* Assuming your user avatars container has this class */
+.users {
+  margin-top: 20px; /* extra gap if needed between buttons and users */
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.users-button-group {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.users-button {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.users-button:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+.users-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Yellow gradient for primary buttons */
+.button-yellow {
+  background: linear-gradient(to right, #facc15, #fcd34d);
+  color: black;
+  font-weight: bold;
+}
+
+/* White button */
+.button-white {
+  background-color: white;
+  color: black;
+}
+
+/* Avatar Styling - visually stunning */
+.users img.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  box-shadow: 
+    0 0 8px rgba(250, 204, 21, 0.8), /* subtle yellow glow */
+    0 4px 6px rgba(0, 0, 0, 0.4); /* soft shadow */
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 2px solid #facc15; /* thin yellow border */
+}
+
+.users img.avatar:hover {
+  transform: scale(1.15);
+  box-shadow: 
+    0 0 15px rgba(250, 204, 21, 1), /* stronger glow on hover */
+    0 8px 12px rgba(0, 0, 0, 0.6);
+  border-color: #fcd34d; /* lighter yellow border on hover */
+}

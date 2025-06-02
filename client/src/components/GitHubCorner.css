@@ -1,0 +1,35 @@
+.github-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    border: none;
+    background-color: var(--primary, #fff);
+    color: #151513;
+    transform: rotate(45deg) translate(12%, -80%) scale(0.8);
+    display: block;
+}
+
+.github-corner svg {
+    width: 150px;
+    height: 100px;
+}
+
+.github-corner g {
+    transform: rotate(-45deg) translate(0%, 50%);
+    transform-origin: bottom;
+}
+
+.github-corner .octo-arm {
+    transform-origin: 130px 106px;
+    fill: currentColor;
+}
+
+.github-corner .octo-body {
+    fill: currentColor;
+}
+
+/* Utility class to hide */
+.github-corner.hidden {
+    display: none;
+}

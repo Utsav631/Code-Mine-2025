@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    min-height: 200px;
+    flex-grow: 1;
+    justify-content: center;
+    overflow-y: auto;
+    padding: 0.5rem 0;
+  }
+  
+  .userGrid {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1.5rem 0.5rem; /* gap-y-6 gap-x-2 */
+  }
+  
+  .userCard {
+    position: relative;
+    display: flex;
+    width: 100px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .username {
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-word;
+    text-align: center;
+  }
+  
+  .statusDot {
+    position: absolute;
+    top: 0;
+    right: 1.25rem; /* 20px (Tailwind right-5) */
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 9999px;
+  }
+  
+  .online {
+    background-color: #22c55e; /* Tailwind bg-green-500 */
+  }
+  
+  .offline {
+    background-color: #ef4444; /* Tailwind bg-danger or red-500 */
+  }
+  

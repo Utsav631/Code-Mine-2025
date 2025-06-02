@@ -1,0 +1,30 @@
+.selectContainer {
+    position: relative;
+    width: 100%;
+  }
+  
+  .label {
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .select {
+    width: 100%;
+    border: none;
+    border-radius: 0.375rem;
+    background-color: #1f2937; /* equivalent to bg-darkHover */
+    color: white;
+    padding: 0.5rem 1rem;
+    outline: none;
+    appearance: none; /* hide native arrow */
+  }
+  
+  .icon {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.75rem;
+    z-index: 10;
+    color: white;
+    pointer-events: none;
+  }
+  

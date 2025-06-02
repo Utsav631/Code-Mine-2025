@@ -1,0 +1,94 @@
+/* CopilotView.css - Color matched with RunView buttons */
+.copilot-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+  background-color: #1f1f23;
+  box-sizing: border-box;
+}
+
+.view-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.copilot-textarea {
+  min-height: 150px;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2a2a2a;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  resize: vertical;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.copilot-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(to right, #facc15, #fcd34d);
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.copilot-button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  transform: scale(1.02);
+}
+
+.copilot-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+
+.copilot-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.copilot-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+
+.copilot-icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.copilot-icon-button:hover {
+  transform: scale(1.1);
+}
+
+.copilot-output {
+  flex-grow: 1;
+  width: 100%;
+  overflow-y: auto;
+  padding: 0.75rem;
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 8px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}

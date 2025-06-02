@@ -1,0 +1,56 @@
+/* buttonStyles.css */
+
+.sidebar-button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(39, 39, 42, 0.8); /* dark translucent */
+  color: #a1a1aa; /* zinc-400 equivalent */
+  border: 1px solid #404045; /* zinc-700 equivalent */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: 
+    background-color 0.2s ease-in-out, 
+    color 0.2s ease-in-out, 
+    box-shadow 0.2s ease-in-out,
+    transform 0.1s ease-in-out;
+  outline: none;
+}
+
+.sidebar-button:hover {
+  background-color: #27272a; /* darker */
+  color: white;
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.7); /* subtle purple glow */
+}
+
+.sidebar-button:active {
+  transform: scale(0.95);
+}
+
+.sidebar-button:focus {
+  outline: 2px solid #8b5cf6; /* purple focus ring */
+  outline-offset: 2px;
+}
+
+/* Active state for selected view */
+.sidebar-button.active {
+  background-color: #27272a; /* same as hover bg */
+  color: white;
+  box-shadow: 0 0 6px rgba(139, 92, 246, 0.9);
+}
+
+.notification-dot {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 10px;
+  height: 10px;
+  background-color: #7c3aed; /* purple */
+  border: 2px solid #1f2937; /* match sidebar background */
+  border-radius: 50%;
+}

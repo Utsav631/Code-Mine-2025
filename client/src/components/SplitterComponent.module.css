@@ -1,0 +1,41 @@
+.splitContainer {
+    height: 100vh;
+    display: flex;
+    background-color: #1e1e1e; /* match editor dark theme */
+    color: white;
+    overflow: hidden;
+  }
+  
+  .gutter {
+    background-color: #333;
+    cursor: col-resize;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  
+  /* Children inside Split */
+  .splitContainer > div {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Sidebar pane */
+  .sidebarPane {
+    background-color: #1f1f23;
+    overflow: hidden;
+  }
+  
+  /* Workspace pane */
+  .workspacePane {
+    background-color: #1a1a1d;
+    overflow: hidden;
+    flex-grow: 1;
+  }
+  
+  .gutter:hover {
+    background-color: #555;
+  }
+  

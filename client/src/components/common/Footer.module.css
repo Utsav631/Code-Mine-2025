@@ -1,0 +1,21 @@
+.footer {
+    position: static;
+    bottom: 0.25rem; /* Tailwind's bottom-1 */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  @media (min-width: 640px) {
+    .footer {
+      position: fixed;
+    }
+  }
+  
+  .link {
+    color: #00bcd4; /* Tailwind's text-primary */
+    text-decoration: underline;
+    text-underline-offset: 1px;
+  }
+  

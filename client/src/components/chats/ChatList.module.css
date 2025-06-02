@@ -1,0 +1,41 @@
+.chatContainer {
+    flex-grow: 1;
+    overflow: auto;
+    border-radius: 0.375rem;
+    background-color: #2c2f39; /* assuming bg-darkHover */
+    padding: 0.5rem;
+  }
+  
+  .messageBox {
+    margin-bottom: 0.5rem;
+    width: 80%;
+    word-break: break-word;
+    border-radius: 0.375rem;
+    background-color: #1f1f1f; /* assuming bg-dark */
+    padding: 0.75rem;
+  }
+  
+  .selfEnd {
+    margin-left: auto;
+  }
+  
+  .meta {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .username {
+    font-size: 0.75rem;
+    color: #38bdf8; /* assuming text-primary */
+  }
+  
+  .timestamp {
+    font-size: 0.75rem;
+    color: white;
+  }
+  
+  .messageText {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+  

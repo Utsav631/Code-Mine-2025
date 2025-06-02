@@ -1,0 +1,77 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+
+  html, body, #root, #__next {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  
+  /* App root container if needed */
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* For pages */
+  .page-container {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  /* GitHubCorner (can also be in its own CSS) */
+  .github-corner {
+    position: fixed;
+    top: 0;
+    right: 0;
+    fill: #151513;
+    color: white;
+    z-index: 1000;
+  }
+  
+  .github-corner svg {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .github-corner .octo-arm {
+    transform-origin: 130px 106px;
+  }
+  
+  .github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+  
+  @keyframes octocat-wave {
+    0%, 100% { transform: rotate(0); }
+    20%, 60% { transform: rotate(-25deg); }
+    40%, 80% { transform: rotate(10deg); }
+  }
+  
+  @media (max-width: 640px) {
+    .github-corner {
+      display: none;
+    }
+  }
+  
+  /* Toast styles (if using react-hot-toast) */
+  .toaster {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2000;
+  }
+  

@@ -1,0 +1,124 @@
+/* ChatsView.css */
+
+.chats-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem 1rem;
+  background-color: #1f1f23; /* Dark background */
+  color: white;
+  gap: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+
+  margin-bottom: 5vh; /* Shift upwards by leaving space below */
+}
+
+.chats-view {
+  position: relative;
+  top: -5vh; /* Move up by 5% of viewport height */
+  /* Keep other styles unchanged */
+}
+
+
+.view-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #facc15; /* Yellow underline for accent */
+  align-self: center;
+}
+
+/* ChatList container to fill available space with scroll */
+.ChatList {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 0.75rem;
+  border-radius: 12px;
+  background-color: #2a2a2e;
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.3);
+}
+
+/* Scrollbar styles for ChatList */
+.ChatList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ChatList::-webkit-scrollbar-track {
+  background: #1f1f23;
+}
+
+.ChatList::-webkit-scrollbar-thumb {
+  background-color: #facc15;
+  border-radius: 20px;
+  border: 2px solid #1f1f23;
+}
+
+/* ChatInput container styling */
+.ChatInput {
+  margin-top: auto;
+  background-color: #2a2a2e;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.3);
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* Input field inside ChatInput */
+.ChatInput input[type="text"] {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #1f1f23;
+  color: white;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.ChatInput input[type="text"]:focus {
+  box-shadow: 0 0 8px #facc15;
+}
+
+/* Run button style consistent with your existing run-button style */
+.run-button {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #facc15, #fcd34d);
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(250, 204, 21, 0.5);
+}
+
+.run-button:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 600px) {
+  .chats-view {
+    padding: 1rem 0.5rem;
+  }
+
+  .view-title {
+    font-size: 1.5rem;
+  }
+
+  .ChatInput input[type="text"] {
+    font-size: 0.9rem;
+  }
+
+  .run-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}

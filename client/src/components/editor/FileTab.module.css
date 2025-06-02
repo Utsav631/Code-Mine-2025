@@ -1,0 +1,48 @@
+.tabContainer {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    user-select: none;
+    gap: 0.5rem; /* gap-2 */
+    overflow-x: auto;
+    padding: 0.5rem; /* p-2 */
+    padding-bottom: 0; /* pb-0 */
+  }
+  
+  .tab {
+    display: flex;
+    width: fit-content;
+    cursor: pointer;
+    align-items: center;
+    border-top-left-radius: 0.375rem; /* rounded-t-md */
+    border-top-right-radius: 0.375rem;
+    padding: 0.25rem 0.5rem; /* px-2 py-1 */
+    color: white;
+  }
+  
+  .activeTab {
+    background-color: #2d2d2d; /* or your darkHover color */
+  }
+  
+  .icon {
+    margin-right: 0.5rem;
+    min-width: fit-content;
+  }
+  
+  .fileName {
+    flex-grow: 1;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .closeIcon {
+    margin-left: 0.75rem; /* ml-3 */
+    border-radius: 0.375rem;
+  }
+  
+  .closeIcon:hover {
+    background-color: #2d2d2d; /* hover:bg-darkHover */
+  }
+  
