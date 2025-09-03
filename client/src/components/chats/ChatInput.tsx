@@ -5,7 +5,7 @@ import { ChatMessage } from "@/types/chat"
 import { SocketEvent } from "@/types/socket"
 import { formatDate } from "@/utils/formateDate"
 import { FormEvent, useRef } from "react"
-import { LuSendHorizonal } from "react-icons/lu"
+import { LuSendHorizontal } from "react-icons/lu"
 import { v4 as uuidV4 } from "uuid"
 import styles from "./ChatInput.module.css"
 
@@ -42,7 +42,7 @@ function ChatInput() {
                 ref={inputRef}
             />
             <button className={styles.button} type="submit">
-                <LuSendHorizonal size={24} />
+                <LuSendHorizontal  size={24} />
             </button>
         </form>
     )

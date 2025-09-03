@@ -1,31 +1,39 @@
-# Stage 1: Build the project
+# -------------------------
+# Stage 1: Build React app
+# -------------------------
 FROM node:18-alpine AS builder
 
-WORKDIR /build
-
-# Copy package files and install dependencies
-COPY package*.json .
-
-RUN npm ci
-
-# Copy the rest of the source code and build
-COPY . .
-
-RUN npm run build
-RUN npm prune --omit=dev
-
-# Stage 2: Serve the `dist` folder
-FROM node:18-alpine AS runner
-
+# Set working directory
 WORKDIR /app
 
-# Copy the built frontend from the builder stage
-COPY --from=builder /build/dist dist/
-COPY --from=builder /build/package*.json .
-COPY --from=builder /build/node_modules ./node_modules
+# Copy only package files first (better layer caching)
+COPY package*.json ./
 
-# Expose the port
-EXPOSE 5173
+# Install dependencies (use npm install instead of npm ci)
+RUN npm install --legacy-peer-deps
 
-# Start the server
-CMD ["npx", "serve", "-s", "dist", "-l", "5173"]
+# Copy the rest of the source code
+COPY . .
+
+# Build the app for production
+RUN npm run build
+
+# -------------------------
+# Stage 2: Serve with Nginx
+# -------------------------
+FROM nginx:1.27-alpine AS runner
+
+# Remove default nginx static files
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy React build output from builder
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Copy custom nginx config (important for SPA routing)
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expose HTTP port
+EXPOSE 80
+
+# Run Nginx in foreground
+CMD ["nginx", "-g", "daemon off;"]

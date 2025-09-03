@@ -31,23 +31,31 @@ const FormComponent = () => {
     }
 
     const validateForm = () => {
-        if (currentUser.username.trim().length === 0) {
+        if (currentUser.username.trim().length === 0) 
+        {
             toast.error("Enter your username")
             return false
-        } else if (currentUser.roomId.trim().length === 0) {
+        } 
+        else if (currentUser.roomId.trim().length === 0) 
+        {
             toast.error("Enter a room id")
             return false
-        } else if (currentUser.roomId.trim().length < 5) {
+        } 
+        else if (currentUser.roomId.trim().length < 5) 
+        {
             toast.error("ROOM Id must be at least 5 characters long")
             return false
-        } else if (currentUser.username.trim().length < 3) {
+        } 
+        else if (currentUser.username.trim().length < 3) 
+        {
             toast.error("Username must be at least 3 characters long")
             return false
         }
         return true
     }
 
-    const joinRoom = (e: FormEvent<HTMLFormElement>) => {
+    const joinRoom = (e: FormEvent<HTMLFormElement>) => 
+    {
         e.preventDefault()
         if (status === USER_STATUS.ATTEMPTING_JOIN) return
         if (!validateForm()) return

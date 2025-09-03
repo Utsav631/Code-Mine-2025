@@ -8,8 +8,6 @@ import { Server } from "socket.io"
 import path from "path"
 import UserModel from "./models/User";
  
- 
-  
 interface UserSocket {
   socketId: string; 
   roomId: string;
@@ -26,13 +24,12 @@ app.use(express.json())
 
 app.use(cors())
 
-app.use(express.static(path.join(__dirname, "public"))) // Serve static files
+app.use(express.static(path.join(__dirname, "public"))) 
 
 
 import connectDB from "./db";
 
-connectDB(); // Call this before `server.listen()`
-
+connectDB();
 
 const server = http.createServer(app)
 
@@ -52,7 +49,6 @@ async function getUsersInRoomFromDB(roomId: string): Promise<User[]> {
 function getUsersInRoom(roomId: string): UserSocket[] {
   return userSocketMap.filter((user) => user.roomId === roomId);
 }
-
 
 // Function to get room id by socket id
 function getRoomId(socketId: SocketId): string | null {
@@ -75,8 +71,6 @@ function getUserBySocketId(socketId: SocketId): UserSocket | null {
   }
   return user;
 }
-
-
 
 io.on("connection", (socket) => {
 	// Handle user actions
